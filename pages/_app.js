@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import { IntercomProvider } from "../util/IntercomProvider";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <IntercomProvider>
+      <Component {...pageProps} />
+    </IntercomProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
